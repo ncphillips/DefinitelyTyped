@@ -14,6 +14,10 @@ declare namespace CodeMirror {
     export var Doc : CodeMirror.DocConstructor;
     export var Pos: CodeMirror.PositionConstructor;
     export var Pass: any;
+    
+    /** Counts the column offset in a string, taking tabs into account.
+    Used mostly to find indentation. */
+    export function countColumn(str: string, end?: number, tabSize: number, startIndex?: number, startValue?: number): number
 
     function fromTextArea(host: HTMLTextAreaElement, options?: EditorConfiguration): CodeMirror.EditorFromTextArea;
 
